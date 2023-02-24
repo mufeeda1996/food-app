@@ -1,6 +1,7 @@
 {
   "name": "food_app",
   "version": "0.1.0",
+  "homepage": "http://mufeeda1996.github.io/react-food-app",
   "proxy": "http://www.themealdb.com/",
   "private": true,
   "dependencies": {
