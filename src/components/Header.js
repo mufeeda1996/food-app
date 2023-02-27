@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import {useSelector} from 'react-redux'
 import { Link } from 'react-router-dom'
+import {auth} from './config'
 
-function Header() {
+function Header({user}) {
 
     
         const { cartList = [] } = useSelector((state) => state.cart);
@@ -18,6 +19,13 @@ function Header() {
                 <Link to='/'>Home</Link>
             </li>
             <li>
+              
+              { user &&
+             <li>
+                <Link to="" onClick={()=>{auth.signOut()}}>Logout</Link>
+             </li>}
+            </li>
+            <li>
                 <Link className='cart-image' to='/cart'>
                <div className="right-section">
                <div className="cart-count-header">{totalCartCount}</div>
@@ -29,6 +37,8 @@ function Header() {
                </svg>
                </div>
                </Link>
+        </li>
+        <li>
         </li>
      </ul>
     </header>

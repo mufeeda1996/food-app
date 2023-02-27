@@ -1,3 +1,6 @@
+import { increment,decrement } from '../../src/redux/Cart'
+import { useDispatch,useSelector } from 'react-redux'
+
 const AddToCart =({orderItem,removeBtn})=>{
 
 

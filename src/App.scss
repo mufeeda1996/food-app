@@ -8,7 +8,7 @@
 body{
     font-family:sans-serif;
     font-size: 16px;
-    background-color: rgba(246, 238, 238, 0.764);
+    background-color:antiquewhite;
 }
 
 p{
@@ -366,7 +366,7 @@ h1{
    
   }
   .add-cart-item img{
-   background-color: #ffb902;
+  //  background-color: #ffb902;
     width: 50px;
     height: 50px;
     padding: 10px;
@@ -460,9 +460,9 @@ header .cart-count-header {
 
 .remove button{
   position:absolute;
-  margin-top: -62px;
+  margin-top: -63px;
   right: 4px;
-  background-color: #ffb902;
+  background-color:antiquewhite;
   border: none;
   border-radius: 5px;
   padding: 5px;
@@ -477,7 +477,7 @@ header .cart-count-header {
   margin-top: -20px;
   right: 30px;
   padding: 5px;
-  background-color: #ffb902;
+  background-color: antiquewhite;
   border: none;
   border-radius: 5px;
   }
@@ -486,7 +486,7 @@ header .cart-count-header {
   position: absolute;
   left: 30px;
   padding: 5px;
-  background-color: #ffb902;
+  background-color:antiquewhite;
   border: none;
   border-radius: 5px;
 }

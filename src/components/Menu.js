@@ -6,7 +6,12 @@ import FilteredDishes from "./FilteredDishes";
 import {Api_Menu} from "./Api_Menu";
 import Header from "./Header";
 import AddToCart from './AddToCart';
-function Menu() {
+import Login from './Login'
+
+
+
+function Menu({user}) {
+  
   let [orderItem,setOrderItem]=useState([])
   function orderOnclick(image,item){
     setOrderItem(
@@ -31,17 +36,18 @@ function Menu() {
   return (
 <div>
 <Router>
-    <Header/>
+    <Header user={user}/>
     <Hero/>
+    {user ?
     <Routes>
     <Route path='/' element={
     <Api_Menu>
     <Menu_dishes orderOnclick={orderOnclick} />
     <FilteredDishes />
     </Api_Menu>
-    }/>
+    }/> 
     <Route path='/cart' element={<AddToCart orderItem={orderItem} removeBtn={removeBtn} />}/>
-   </Routes>
+   </Routes> : <Login/>}
    </Router>
     </div>
   )
